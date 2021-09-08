@@ -1,0 +1,17 @@
+Two ways to find items on your computer
+	Through graphical interface
+		More visual based with many visuals
+	through command line interface
+A directory is a folder
+Files are held in the folders
+
+Command Line Interface
+dir to see directories
+cd [directory name] to open new directory
+ren to rename directory
+	example/ ren [original directory name] [new directory name] 
+using command line interface is MUCH faster
+
+
+	
+
