@@ -1,0 +1,61 @@
+<html>
+	<title> My Self Portrait</title>
+<head>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"></script>
+	
+	<script>
+  var movel=0
+  var move=60
+  var somethin=1
+  var test=12
+  var anot=Math.floor(Math.random()*10)+1
+  var speca=Math.floor(Math.random()*10)+1
+  var specb=Math.floor(Math.random()*10)+1
+  var specc=Math.floor(Math.random()*10)+1
+  var goji=2
+  var beeg=22
+  var specd=Math.floor(Math.random()*10)+1
+ 
+	function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+  background(220);
+  
+  fill(232, 219, 179);
+  circle(move,test,150);
+  fill(255,255,255);
+  rect(test, 120, 40,30);
+    if(test>=400 || test<=0){specb *=-1;}test+=specb;
+   fill(255,255,255);
+  rect(move, 120, 40,30);
+   if(move>=400 || move<=0){speca *=-1;}move+=speca;
+  line(190,130,210,130);
+  fill(0,0,0,);
+  rect(135,somethin,125,200);
+    if(somethin>=400 || somethin<=0){anot *=-1;}somethin+=anot;
+  
+  fill(255,255,255);
+  arc(200, 190, 90, 20, 0, PI / 1.0);
+  fill(69, 142, 237);
+  arc(200, 110, 130, 70, -PI, 0, CHORD);
+  line(200,110,320,110);
+  fill(232, 219, 179);
+  triangle(190,160,200,140,200,160);
+  fill(0,255,0);
+  textSize(24);
+  text('GODZILLA',137,goji);
+  if(goji>=400 || goji<=0){specc *=-1;}goji+=specc;
+    
+  fill(255,255,255);
+  point(200,20,);
+fill(255,0,0);
+  textSize(beeg);
+  if(beeg>=60 || beeg<=0){specd *=-1;}beeg+=specd;
+text('Lucas Jarrett', 270,390);
+}
+	</script>
+</head>
+<body></body>
+</html>
