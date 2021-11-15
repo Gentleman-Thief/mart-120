@@ -1,0 +1,76 @@
+<html>
+<head>
+<title>Race to the Finish!</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"></script>
+
+<script>
+var x = 500;
+var y = 500;
+var px = 0;
+var py = 200;
+var sx = 50;
+var sy = 15;
+var goalx = 380;
+var goaly = 380;
+var winx = 500;
+var winy = 200;
+var s2x = 380;
+var s2y = 1;
+var movement = Math.floor(Math.random()*10)+1;
+var movement1 = Math.floor(Math.random()*10)+1;
+var movement2 = Math.floor(Math.random()*10)+1;
+
+
+
+
+function mouseClicked(){x=mouseX;y=mouseY;}
+function keyPressed(){if(key=='d'){px+=20;}
+			else if(key=='a'){px-=20;}
+			else if(key=='w'){py-=20;}
+			else if(key=='s'){py+=20;}}
+
+
+function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+
+background(140);
+fill(200,180,0);
+textSize(40);
+text('You Win!',winx,winy);
+
+fill(243,76,189);
+rect(x,y,20,90);
+
+fill(225,0,147);
+square(s2x,s2y,60);
+	if(s2y>=400||s2y<=0){movement1 *=-1;}s2y+=movement1;
+	if(s2x>=400||s2x<=0){movement2 *=-1;}s2x+=movement2;
+
+
+fill(0,0,250);
+square(360,360,40);
+
+fill(255,255,255);
+textSize(18);
+text('Goal',360,380);
+
+
+fill(30,200,50);
+circle(px,py,40);
+if(px>=goalx && py>=goaly){winx = 100};
+	
+
+fill(225,0,0);
+square(sx,sy,30);
+	if(sy>=400||sy<=0){movement *=-1;}sy+=movement;
+
+
+	
+}
+</script>
+</head>
+<body></body>
+</html>
