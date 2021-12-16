@@ -1,0 +1,52 @@
+<html>
+<title>The House on the Hill</title>
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"></script>
+
+<script>
+var bat=1
+var speed=7
+var rd=10
+var gren=251
+var blu=253
+var sr=255
+var sg=255
+var sb=0
+var stx=-10
+var sty=-10
+
+function setup(){ 
+	createCanvas(400,400);
+}
+
+function draw() {
+	background(rd,gren,blu);
+fill(sr,sg,sb);
+circle(bat,100,50);
+	if(bat<=400){bat=bat+.4};
+	if(bat>=400){bat=0};
+	if(bat>=399){sr=255,sg=255,sb=255};
+	if(bat>=200 && sb>=254){stx=stx+4,sty=sty+5};
+fill(0,255,0);
+rect(0,300,401,101);
+fill(255,255,255);
+circle(stx,sty,5);
+fill(255,0,0);
+square(300,260,70);
+fill(54,38,36);
+triangle(280,261,335,220,390,261);
+fill(255,255,255);
+rect(325,300,18,30);
+fill(0,0,0);
+circle(327,315,2);
+
+
+if(bat>=1){rd=rd-.3,gren=gren-.3,blu=blu-.3};
+
+
+}
+
+</script>
+</head>
+<body></body>
+<html> 
